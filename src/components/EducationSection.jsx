@@ -1,102 +1,83 @@
 import React from 'react';
-import { BookOpen, Award, ExternalLink } from 'lucide-react';
 
 const EducationSection = () => {
   const education = [
     {
+      year: "2023 — 2026",
       degree: "B.Tech in Computer Engineering",
-      institution: "Ganpat University, Mehsana, Gujarat",
-      year: "2023 - 2026"
+      institution: "Ganpat University",
+      achievements: [
+        { label: "Specialization", value: "Focused on Full Stack Architecture, Scalable Systems, and Modern Web Tech." },
+        { label: "Academic Focus", value: "Advanced Software Engineering, Cloud Computing, and Database Management." }
+      ]
     },
     {
+      year: "2020 — 2023",
       degree: "Diploma in Computer Engineering",
-      institution: "Ganpat University, Mehsana, Gujarat",
-      year: "2020 - 2023"
-    },
-    {
-      degree: "10th Grade",
-      institution: "Ratnamani School, Bechraji",
-      year: "2020"
+      institution: "Ganpat University",
+      achievements: [
+        { label: "Foundations", value: "Core programming fundamentals, data structures, and system security basics." }
+      ]
     }
   ];
 
   const certifications = [
-    {
-      title: "Full Stack Development Training",
-      issuer: "The Special Character",
-      pdfLink: "/fullstack_certificate.pdf"
-    },
-    {
-      title: "Cyber Security and Ethical Hacking",
-      issuer: "Ganpat University",
-      pdfLink: "/cybersecurity_certificate.pdf"
-    }
+    { title: "Full Stack Development", issuer: "The Special Character", link: "/fullstack_certificate.pdf" },
+    { title: "Cyber Security & Ethical Hacking", issuer: "Ganpat University", link: "/cybersecurity_certificate.pdf" }
   ];
 
   return (
-    <section id="education" className="section container">
-      <h2 className="heading-secondary">
-        <span className="heading-primary" style={{ fontSize: '2.5rem' }}>Background</span>
-      </h2>
-      
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
-        
-        {/* Education Column */}
-        <div className="glass-panel" style={{ padding: '2.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '2rem' }}>
-            <BookOpen size={28} color="var(--accent-secondary)" />
-            <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)' }}>Education</h3>
-          </div>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            {education.map((item, index) => (
-              <div key={index} style={{ borderLeft: '2px solid var(--accent-color-glow)', paddingLeft: '1.5rem', position: 'relative' }}>
-                <div style={{ 
-                  position: 'absolute', left: '-6px', top: '5px', width: '10px', height: '10px', 
-                  borderRadius: '50%', background: 'var(--accent-secondary)' 
-                }}></div>
-                <h4 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '0.3rem' }}>{item.degree}</h4>
-                <p style={{ color: 'var(--text-secondary)', marginBottom: '0.2rem' }}>{item.institution}</p>
-                <span style={{ 
-                  display: 'inline-block', fontSize: '0.85rem', color: 'var(--accent-secondary)', 
-                  background: 'rgba(59, 130, 246, 0.1)', padding: '0.2rem 0.6rem', borderRadius: '4px', fontWeight: 500 
-                }}>{item.year}</span>
+    <section id="education" className="section">
+      <div className="container reveal">
+        <div className="section-head">
+          <h2 className="section-title">Education & Certifications</h2>
+          <p className="section-subtitle">Academic foundations and continuous professional development.</p>
+        </div>
+
+        <div className="exp-list">
+          {education.map((item, index) => (
+            <div key={index} className="exp-item glass-panel">
+              <div className="exp-left">
+                <span className="exp-year">{item.year}</span>
+                <div className="timeline-dot"></div>
               </div>
-            ))}
+              <div className="exp-right">
+                <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)' }}>{item.degree}</h3>
+                <span className="exp-company">
+                  <i className="fa-solid fa-building-columns" style={{ marginRight: '0.5rem' }}></i> {item.institution}
+                </span>
+                <ul className="exp-achievements">
+                  {item.achievements.map((ach, idx) => (
+                    <li key={idx}>
+                      <strong>{ach.label}:</strong> {ach.value}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+
+          {/* Certifications Block */}
+          <div className="exp-item glass-panel">
+            <div className="exp-left">
+              <span className="exp-year" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>CERTIFIED</span>
+              <div className="timeline-dot" style={{ backgroundColor: 'var(--text-muted)', boxShadow: 'none' }}></div>
+            </div>
+            <div className="exp-right">
+              <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)' }}>Professional Certifications</h3>
+              <span className="exp-company">
+                <i className="fa-solid fa-certificate" style={{ marginRight: '0.5rem' }}></i> Continuous Learning
+              </span>
+              <div className="skill-tags" style={{ marginTop: '1rem' }}>
+                {certifications.map((cert, idx) => (
+                  <a key={idx} href={cert.link} target="_blank" rel="noreferrer" className="skill-tag" style={{ textDecoration: 'none' }}>
+                    <i className="fa-solid fa-file-pdf" style={{ marginRight: '0.5rem' }}></i> {cert.title} ({cert.issuer})
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Certifications Column */}
-        <div className="glass-panel" style={{ padding: '2.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '2rem' }}>
-            <Award size={28} color="var(--accent-secondary)" />
-            <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)' }}>Certifications</h3>
-          </div>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {certifications.map((item, index) => (
-              <a href={item.pdfLink} target="_blank" rel="noreferrer" key={index} className="glass-panel" style={{ 
-                padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
-                textDecoration: 'none', transition: 'all 0.3s ease', cursor: 'pointer', background: 'rgba(15, 17, 21, 0.4)'
-              }}
-              onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--accent-secondary)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
-              onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.transform = 'translateY(0)'; }}
-              >
-                <div>
-                  <h4 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '0.4rem' }}>{item.title}</h4>
-                  <p style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem' }}>
-                    <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--text-secondary)' }}></span>
-                    {item.issuer}
-                  </p>
-                </div>
-                <div style={{ color: 'var(--accent-secondary)', background: 'rgba(59, 130, 246, 0.1)', padding: '0.5rem', borderRadius: '8px', display: 'flex', alignContent: 'center' }}>
-                  <ExternalLink size={18} />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   );

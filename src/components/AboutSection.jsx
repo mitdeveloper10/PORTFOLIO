@@ -1,56 +1,55 @@
 import React from 'react';
 
 const AboutSection = () => {
-  const skills = [
-    "HTML/CSS/JS", "PHP", "MySQL", "Java", "Python", 
-    "React", "UI/UX Design", "Responsive Design", 
-    "Git/GitHub", "Figma", "Canva", "Video Editing"
-  ];
-
   return (
-    <section id="about" className="section container">
-      <h2 className="heading-secondary">
-        <span className="heading-primary" style={{ fontSize: '2.5rem' }}>About Me</span>
-      </h2>
-      
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
-        <div className="glass-panel" style={{ padding: '2rem' }}>
-          <h3 style={{ marginBottom: '1rem', color: 'var(--accent-secondary)' }}>Get to know me!</h3>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>
-            Hi, I'm Mit Suthar, a final-year B.Tech Computer Engineering student at Ganpat University. I am a passionate web developer with hands-on experience in building dynamic web applications. 
-          </p>
-          <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-            Through my academic journey (Diploma and B.Tech) and personal projects, I have developed expertise in front-end and back-end technologies. I am a quick learner who loves tackling new challenges and finding efficient solutions. I am currently seeking a job opportunity where I can contribute my skills and grow professionally.
-          </p>
-          <a href="#contact" className="btn btn-primary">Let's Talk</a>
+    <section id="about" className="section">
+      <div className="container reveal">
+        <div className="section-head">
+          <h2 className="section-title">Technical Expertise</h2>
+          <p className="section-subtitle">Categorized skills for a quick overview of my tech stack.</p>
         </div>
+        
+        <div className="skills-container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          {/* Frontend */}
+          <div className="skill-category glass-panel" style={{ padding: '2.5rem' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <i className="fa-solid fa-laptop-code" style={{ color: 'var(--accent-primary)' }}></i> Frontend
+            </h3>
+            <div className="skill-tags">
+              <span className="skill-tag">HTML5 & CSS3</span>
+              <span className="skill-tag">JavaScript (ES6+)</span>
+              <span className="skill-tag">React.js</span>
+              <span className="skill-tag">Responsive Design</span>
+              <span className="skill-tag">UI/UX Design</span>
+            </div>
+          </div>
 
-        <div className="glass-panel" style={{ padding: '2rem' }}>
-          <h3 style={{ marginBottom: '1.5rem', color: 'var(--accent-color)' }}>My Skills</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            {skills.map((skill, index) => (
-              <span key={index} style={{
-                background: 'rgba(59, 130, 246, 0.1)',
-                border: '1px solid rgba(59, 130, 246, 0.2)',
-                padding: '0.5rem 1rem',
-                borderRadius: '8px',
-                fontSize: '0.9rem',
-                color: 'var(--accent-secondary)',
-                transition: 'all 0.3s ease',
-                cursor: 'default'
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.borderColor = 'var(--accent-secondary)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.borderColor = 'var(--border-color)';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-              >
-                {skill}
-              </span>
-            ))}
+          {/* Backend */}
+          <div className="skill-category glass-panel" style={{ padding: '2.5rem' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <i className="fa-solid fa-server" style={{ color: 'var(--accent-primary)' }}></i> Backend
+            </h3>
+            <div className="skill-tags">
+              <span className="skill-tag">PHP</span>
+              <span className="skill-tag">Python (Django)</span>
+              <span className="skill-tag">Node.js</span>
+              <span className="skill-tag">MySQL</span>
+              <span className="skill-tag">MongoDB</span>
+            </div>
+          </div>
+
+          {/* Tools */}
+          <div className="skill-category glass-panel" style={{ padding: '2.5rem' }}>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <i className="fa-solid fa-screwdriver-wrench" style={{ color: 'var(--accent-primary)' }}></i> Tools & Others
+            </h3>
+            <div className="skill-tags">
+              <span className="skill-tag">Git & GitHub</span>
+              <span className="skill-tag">Vercel</span>
+              <span className="skill-tag">MySQL</span>
+              <span className="skill-tag">Java</span>
+              <span className="skill-tag">Figma & Canva</span>
+            </div>
           </div>
         </div>
       </div>
