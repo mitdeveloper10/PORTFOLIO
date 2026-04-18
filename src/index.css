@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Professional Dark Theme Palette */
+  --bg-color: #0b0f19;
+  --bg-color-light: #161b22;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-color: #3b82f6;
+  --accent-color-glow: rgba(59, 130, 246, 0.15);
+  --accent-secondary: #60a5fa;
+  --border-color: rgba(255, 255, 255, 0.08);
+  
+  --font-primary: 'Outfit', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Reusable Utilities */
+.section {
+  padding: 6rem 0;
+}
+
+.heading-primary {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.heading-secondary {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 99px;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 4px 6px -1px var(--accent-color-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--accent-secondary);
+  box-shadow: 0 10px 15px -3px var(--accent-color-glow);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+}
+
+.glass-panel {
+  background: var(--bg-color-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
