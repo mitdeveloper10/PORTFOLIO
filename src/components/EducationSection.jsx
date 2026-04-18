@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Award } from 'lucide-react';
+import { BookOpen, Award, ExternalLink } from 'lucide-react';
 
 const EducationSection = () => {
   const education = [
@@ -23,11 +23,13 @@ const EducationSection = () => {
   const certifications = [
     {
       title: "Full Stack Development Training",
-      issuer: "The Special Character"
+      issuer: "The Special Character",
+      pdfLink: "/fullstack_certificate.pdf"
     },
     {
       title: "Cyber Security and Ethical Hacking",
-      issuer: "Ganpat University"
+      issuer: "Ganpat University",
+      pdfLink: "/cybersecurity_certificate.pdf"
     }
   ];
 
@@ -71,15 +73,26 @@ const EducationSection = () => {
             <h3 style={{ fontSize: '1.8rem', color: 'var(--text-primary)' }}>Certifications</h3>
           </div>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             {certifications.map((item, index) => (
-              <div key={index} style={{ borderBottom: index !== certifications.length - 1 ? '1px solid var(--border-color)' : 'none', paddingBottom: index !== certifications.length - 1 ? '1.5rem' : '0' }}>
-                <h4 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '0.5rem' }}>{item.title}</h4>
-                <p style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--text-secondary)' }}></span>
-                  {item.issuer}
-                </p>
-              </div>
+              <a href={item.pdfLink} target="_blank" rel="noreferrer" key={index} className="glass-panel" style={{ 
+                padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
+                textDecoration: 'none', transition: 'all 0.3s ease', cursor: 'pointer', background: 'rgba(15, 17, 21, 0.4)'
+              }}
+              onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--accent-secondary)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+              onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+              >
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--text-primary)', marginBottom: '0.4rem' }}>{item.title}</h4>
+                  <p style={{ color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem' }}>
+                    <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: 'var(--text-secondary)' }}></span>
+                    {item.issuer}
+                  </p>
+                </div>
+                <div style={{ color: 'var(--accent-secondary)', background: 'rgba(59, 130, 246, 0.1)', padding: '0.5rem', borderRadius: '8px', display: 'flex', alignContent: 'center' }}>
+                  <ExternalLink size={18} />
+                </div>
+              </a>
             ))}
           </div>
         </div>
