@@ -21,17 +21,12 @@ const EducationSection = () => {
     }
   ];
 
-  const certifications = [
-    { title: "Full Stack Development", issuer: "The Special Character", link: "/fullstack_certificate.pdf" },
-    { title: "Cyber Security & Ethical Hacking", issuer: "Ganpat University", link: "/cybersecurity_certificate.pdf" }
-  ];
-
   return (
     <section id="education" className="section">
       <div className="container reveal">
         <div className="section-head">
-          <h2 className="section-title">Education & Certifications</h2>
-          <p className="section-subtitle">Academic foundations and continuous professional development.</p>
+          <h2 className="section-title">Academic Journey</h2>
+          <p className="section-subtitle">My educational background and academic focus.</p>
         </div>
 
         <div className="exp-list">
@@ -56,27 +51,6 @@ const EducationSection = () => {
               </div>
             </div>
           ))}
-
-          {/* Certifications Block */}
-          <div className="exp-item glass-panel">
-            <div className="exp-left">
-              <span className="exp-year" style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>CERTIFIED</span>
-              <div className="timeline-dot" style={{ backgroundColor: 'var(--text-muted)', boxShadow: 'none' }}></div>
-            </div>
-            <div className="exp-right">
-              <h3 style={{ fontSize: '1.5rem', color: 'var(--text-main)' }}>Professional Certifications</h3>
-              <span className="exp-company">
-                <i className="fa-solid fa-certificate" style={{ marginRight: '0.5rem' }}></i> Continuous Learning
-              </span>
-              <div className="skill-tags" style={{ marginTop: '1rem' }}>
-                {certifications.map((cert, idx) => (
-                  <a key={idx} href={cert.link} target="_blank" rel="noreferrer" className="skill-tag" style={{ textDecoration: 'none' }}>
-                    <i className="fa-solid fa-file-pdf" style={{ marginRight: '0.5rem' }}></i> {cert.title} ({cert.issuer})
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -21,8 +21,9 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Impact</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#projects">Work</a></li>
-          <li><a href="#education">Experience</a></li>
           <li><a href="#contact" className="btn btn-secondary btn-sm nav-cta">Let's Talk</a></li>
         </ul>
 
