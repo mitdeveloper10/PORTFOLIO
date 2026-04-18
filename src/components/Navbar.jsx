@@ -27,7 +27,7 @@ const Navbar = () => {
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <a href="#home" style={{ fontSize: '1.5rem', fontWeight: 700, fontFamily: 'var(--font-primary)' }}>
-          Portfolio<span style={{ color: 'var(--accent-secondary)' }}>.</span>
+          Mit Suthar<span style={{ color: 'var(--accent-secondary)' }}>.</span>
         </a>
 
         {/* Desktop Menu */}
@@ -43,7 +43,8 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Toggle - CSS would handle hiding/showing typically, but we do basic inline here */}
-        <style dangerouslySetInnerHTML={{__html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           .nav-link { font-weight: 500; transition: color 0.3s ease; }
           .nav-link:hover { color: var(--accent-secondary); }
           .mobile-menu-btn { display: none; background: transparent; border: none; color: white; cursor: pointer; }

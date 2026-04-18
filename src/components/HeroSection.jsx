@@ -70,7 +70,7 @@ const HeroSection = () => {
             <a href="https://github.com/Mitdeveloper10" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = 'var(--text-primary)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
               <FaGithub size={24} />
             </a>
-            <a href="https://linkedin.com/in/Mit-Suthar" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#0ea5e9'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
+            <a href="https://www.linkedin.com/in/mit-suthar10/" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#0ea5e9'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
               <FaLinkedin size={24} />
             </a>
             <a href="mailto:mitsuthar11@gmail.com" target="_blank" rel="noreferrer" style={{ color: 'var(--text-secondary)', transition: 'color 0.3s' }} onMouseOver={(e) => e.currentTarget.style.color = '#ea4335'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}>
