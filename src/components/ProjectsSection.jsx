@@ -11,8 +11,8 @@ const ProjectsSection = () => {
         { name: "Node.js", icon: "fa-brands fa-node-js" },
         { name: "API", icon: "fa-solid fa-network-wired" }
       ],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://hunar-hub.onrender.com/",
+      githubLink: "https://github.com/mitdeveloper10/Hunar_Hub",
       gradient: "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)"
     },
     {
