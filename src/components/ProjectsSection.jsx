@@ -3,17 +3,17 @@ import React from 'react';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Furniture Rental System",
-      description: "A comprehensive rental marketplace for furniture booking and management. Featuring secure cart operations and role-based dashboards.",
-      result: "Engineered a scalable E-commerce architecture with specialized Admin, User, and Owner control panels.",
+      title: "HUNAR-HUB",
+      description: "A comprehensive marketplace platform featuring dynamic search filtering, user authentication, and reliable OTP delivery systems.",
+      result: "Engineered robust backend API integrations, including Brevo for reliable email delivery and secure user verification.",
       tech: [
-        { name: "Python", icon: "fa-brands fa-python" },
-        { name: "Django", icon: "fa-solid fa-code" },
-        { name: "CSS", icon: "fa-brands fa-css3-alt" }
+        { name: "React", icon: "fa-brands fa-react" },
+        { name: "Node.js", icon: "fa-brands fa-node-js" },
+        { name: "API", icon: "fa-solid fa-network-wired" }
       ],
       liveLink: "#",
       githubLink: "#",
-      gradient: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
+      gradient: "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)"
     },
     {
       title: "SHRI NIVAS",
